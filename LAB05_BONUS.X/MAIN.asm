@@ -1,0 +1,108 @@
+
+#include "xc.inc"
+GLOBAL _lcm
+PSECT mytext, local, class=CODE, reloc=2
+ 
+LOAD_BYTE MACRO DES, LITERAL
+	MOVLW LITERAL
+	MOVWF DES
+ENDM
+	
+
+swap:
+    MOVFF 0X90, 0X92
+    MOVFF 0X91, 0X90
+    MOVFF 0X92, 0X91
+    CLRF 0X92
+    RETURN
+
+mod_8:              ; I 0X80, 0X81, O 0X82, 0x81 > 0x80
+    CLRF 0X88
+    MOVFF 0X80, 0X88
+    mod_loop:
+	MOVF 0X80, 0
+	ADDWF 0X88, 0
+	CPFSGT 0X81
+	    GOTO RET
+	NOP
+	MOVWF 0X88
+	GOTO mod_loop
+    
+    RET:
+	MOVF 0X88, 0
+	SUBWF 0X81
+	MOVFF 0X81, 0X82
+	RETURN
+	
+	
+    
+    
+gcd: ; input 0x90, 0x91, result 0x99, 0X91 > 0X90
+    MOVF 0X90, 0
+    CPFSGT 0X91
+	RCALL swap
+    NOP
+    TSTFSZ 0X90
+	GOTO RECURSIVE
+    NOP
+    MOVFF 0X91, 0X99
+    RETURN
+    
+    RECURSIVE:
+    MOVFF 0X90, 0X80
+    MOVFF 0X91, 0X81
+    RCALL mod_8
+    MOVFF 0X90, 0X91
+    MOVFF 0X82, 0X90
+    RCALL gcd
+
+DEVISION: ; RESULT 0X18
+    MOVFF 0X01, 0X11
+    MOVFF 0X02, 0X12
+    MOVFF 0X99, 0X19
+    
+    CLRF 0X13
+    CLRF 0X14
+    CLRF 0X17
+    CLRF 0X18
+    
+    LOOP:
+    INCF 0X18
+    BTFSC STATUS, 0
+	INCF 0X17
+    NOP
+    BCF STATUS, 0
+    MOVF 0X19, 0
+    ADDWF 0X14
+    BTFSC STATUS, 0
+	INCF 0X13
+    NOP
+    BCF STATUS, 0
+    
+    MOVF 0X12, 0
+    CPFSEQ 0X14
+	GOTO LOOP
+    NOP
+    MOVF 0X11, 0
+    CPFSEQ 0X13
+	GOTO LOOP
+    NOP
+    RETURN
+    
+_lcm:
+    MOVWF 0X02
+    MOVFF 0X01, 0X90
+    MOVFF 0X02, 0X91
+    RCALL gcd
+    MOVF 0X01, 0
+    MULWF 0X03
+    MOVFF PRODH, 0X01
+    MOVFF PRODL, 0X02
+    
+    RCALL DEVISION
+    MOVFF 0X17, 0X02
+    MOVFF 0X18, 0X01
+    RETURN
+    
+END
+  

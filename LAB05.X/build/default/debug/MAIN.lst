@@ -1,0 +1,108 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                                           Thu Oct 19 00:14:46 2023
+
+
+     1                           	processor	18F4520
+     2                           	pagewidth 132
+     3                           	opt	flic
+     4                           	psect	udata_acs,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     5                           	psect	udata_bank0,global,class=BANK0,space=1,delta=1,lowdata,noexec
+     6                           	psect	udata_bank1,global,class=BANK1,space=1,delta=1,lowdata,noexec
+     7                           	psect	udata_bank2,global,class=BANK2,space=1,delta=1,lowdata,noexec
+     8                           	psect	udata_bank3,global,class=BANK3,space=1,delta=1,lowdata,noexec
+     9                           	psect	udata_bank4,global,class=BANK4,space=1,delta=1,lowdata,noexec
+    10                           	psect	udata_bank5,global,class=BANK5,space=1,delta=1,lowdata,noexec
+    11                           	psect	udata,global,class=RAM,space=1,delta=1,noexec
+    12                           	psect	code,global,reloc=2,class=CODE,delta=1
+    13                           	psect	data,global,reloc=2,class=CONST,delta=1,noexec
+    14                           	psect	edata,global,class=EEDATA,space=3,delta=1,noexec
+    15                           	psect	mytext,local,reloc=1,class=CODE,delta=1
+    16   000000                     
+    17                           	psect	edata
+    18   000000                     stk_offset	set	0
+    19   000000                     auto_size	set	0
+    20                           
+    21                           ; stack_auto defines a symbol /name/_offset which equates to the
+    22                           ; stack offset of the auto object in question
+    23   000000                     
+    24                           ; stack_param defines a symbol /name/_offset which equates to the
+    25                           ; stack offset of the parameter object in question
+    26   000000                     
+    27                           ; alloc_stack adjusts the SP to allocate space for auto objects
+    28                           ; it also links in to the btemp symbol so that can be used
+    29   000000                     
+    30                           ; restore_stack adjusts the SP to remove all auto and parameter
+    31                           ; objects from the stack prior to returning from a function
+    32   000000                     
+    33                           	psect	mytext
+    34   000602                     _is_square:
+    35                           	callstack 0
+    36   000602  0E10               	movlw	16
+    37   000604  6E10               	movwf	16,c
+    38   000606  0E01               	movlw	1
+    39   000608  6E20               	movwf	32,c
+    40   00060A                     loop:
+    41   00060A  5020               	movf	32,w,c
+    42   00060C  6410               	cpfsgt	16,c
+    43   00060E  D008               	goto	RET_FAILED
+    44   000610  0000               	nop	
+    45   000612  0220               	mulwf	32,c
+    46   000614  2A20               	incf	32,f,c
+    47   000616  5001               	movf	1,w,c
+    48   000618  62F3               	cpfseq	prodl,c
+    49   00061A  D7F7               	goto	loop
+    50   00061C  0000               	nop	
+    51   00061E  D002               	goto	RET_SUCCESS
+    52   000620                     RET_FAILED:
+    53   000620  0EFF               	movlw	255
+    54   000622  0012               	return	
+    55   000624                     RET_SUCCESS:
+    56   000624  0E01               	movlw	1
+    57   000626  0012               	return	
+    58                           tosu	equ	0xFFF
+    59                           tosh	equ	0xFFE
+    60                           tosl	equ	0xFFD
+    61                           stkptr	equ	0xFFC
+    62                           pclatu	equ	0xFFB
+    63                           pclath	equ	0xFFA
+    64                           pcl	equ	0xFF9
+    65                           tblptru	equ	0xFF8
+    66                           tblptrh	equ	0xFF7
+    67                           tblptrl	equ	0xFF6
+    68                           tablat	equ	0xFF5
+    69                           prodh	equ	0xFF4
+    70                           prodl	equ	0xFF3
+    71                           indf0	equ	0xFEF
+    72                           postinc0	equ	0xFEE
+    73                           postdec0	equ	0xFED
+    74                           preinc0	equ	0xFEC
+    75                           plusw0	equ	0xFEB
+    76                           fsr0h	equ	0xFEA
+    77                           fsr0l	equ	0xFE9
+    78                           wreg	equ	0xFE8
+    79                           indf1	equ	0xFE7
+    80                           postinc1	equ	0xFE6
+    81                           postdec1	equ	0xFE5
+    82                           preinc1	equ	0xFE4
+    83                           plusw1	equ	0xFE3
+    84                           fsr1h	equ	0xFE2
+    85                           fsr1l	equ	0xFE1
+    86                           bsr	equ	0xFE0
+    87                           indf2	equ	0xFDF
+    88                           postinc2	equ	0xFDE
+    89                           postdec2	equ	0xFDD
+    90                           preinc2	equ	0xFDC
+    91                           plusw2	equ	0xFDB
+    92                           fsr2h	equ	0xFDA
+    93                           fsr2l	equ	0xFD9
+    94                           status	equ	0xFD8
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                               Thu Oct 19 00:14:46 2023
+
+                        loop 060A                         PRODL 0FF3                       isa$std 0001  
+                  RET_FAILED 0620                   RET_SUCCESS 0624                    _is_square 0602  
+                   isa$xinst 0000  

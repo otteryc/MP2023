@@ -1,0 +1,46 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Thu Oct 12 15:57:35 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000ce
+                   .cinit    romdata   0x0000ce    program   0x000002
+.config_300001_BUILD/DEFAULT/DEBUG/MAIN.O    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/DEBUG/MAIN.O    romdata   0x300003    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000cf      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+            210 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 DIVISION   0x00008c    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     Fact   0x000012    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     INIT   0x000000    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                   K_LOOP   0x000058    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     LOOP   0x000020    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     MAIN   0x0000b6    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     INIT   0x000000    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     Fact   0x000012    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     LOOP   0x000020    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                   K_LOOP   0x000058    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                 DIVISION   0x00008c    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+                     MAIN   0x0000b6    program     static C:\Users\otter\MPLABXProjects\LAB04_BONUS.X\main.asm
+
+

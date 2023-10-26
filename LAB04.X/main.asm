@@ -1,0 +1,39 @@
+List p=18f4520
+    #include<p18f4520.inc>
+	CONFIG OSC = INTIO67
+	CONFIG WDT = OFF
+	org 0x00
+	
+	Add_Mul macro xh, xl, yh, yl
+	CLRF 0X99
+	
+	MOVLW xh
+	MOVWF 0x20
+	MOVLW yh
+	MOVWF 0X21
+	
+	CLRF WREG
+	ADDLW xl
+	ADDLW yl
+	MOVWF 0X01
+	MOVF 0X20, 0
+	ADDWFC  0X21, 0
+	MOVWF 0X00
+	MULWF 0x01
+	MOVFF PRODH, 0X10
+	MOVFF PRODL, 0X11
+	MOVF 0X00, 0
+	
+	BTFSC 0X01, 7
+	    SUBWF 0X10
+	NOP
+	
+	MOVF 0X01, 0
+	BTFSC 0X00, 7
+	    SUBWF 0X10
+	NOP
+	endm
+	
+	Add_Mul 0Xff, 0Xba, 0xff, 0xdd
+	NOP
+	END

@@ -1,0 +1,34 @@
+#include "xc.inc"
+GLOBAL _is_square
+PSECT mytext, local, class=CODE, reloc=1
+ 
+ LOAD_BYTE MACRO DES, LITERAL
+	MOVLW LITERAL
+	MOVWF DES
+	ENDM
+ 
+ _is_square:
+    LOAD_BYTE 0X10, 16
+    LOAD_BYTE 0X20, 1
+    loop:
+	MOVF 0X20, 0
+	CPFSGT 0X10
+	    GOTO RET_FAILED
+	NOP
+	MULWF 0X20
+	INCF 0X20
+	
+	MOVF 0X01, 0
+	CPFSEQ PRODL
+	    GOTO loop
+	NOP
+	GOTO RET_SUCCESS
+	
+    RET_FAILED:
+	MOVLW 0XFF
+	RETURN
+    RET_SUCCESS:
+	MOVLW 0X01
+	RETURN
+END
+    
