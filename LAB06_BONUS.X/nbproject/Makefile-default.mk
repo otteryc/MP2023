@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=cof
 DEBUGGABLE_SUFFIX=cof
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=hex
 DEBUGGABLE_SUFFIX=cof
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=LAB06_advanced.asm
+SOURCEFILES_QUOTED_IF_SPACED=LAB06_BONUS.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/LAB06_advanced.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/LAB06_advanced.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/LAB06_BONUS.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/LAB06_BONUS.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/LAB06_advanced.o
+OBJECTFILES=${OBJECTDIR}/LAB06_BONUS.o
 
 # Source Files
-SOURCEFILES=LAB06_advanced.asm
+SOURCEFILES=LAB06_BONUS.asm
 
 
 CFLAGS=
@@ -87,42 +87,42 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=18f4520
 MP_LINKER_DEBUG_OPTION=-r=ROM@0x7DC0:0x7FFF -r=RAM@GPR:0x5F4:0x5FF
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/LAB06_advanced.o: LAB06_advanced.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/LAB06_BONUS.o: LAB06_BONUS.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/LAB06_advanced.o.d 
-	@${RM} ${OBJECTDIR}/LAB06_advanced.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/LAB06_advanced.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/LAB06_advanced.lst\" -e\"${OBJECTDIR}/LAB06_advanced.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/LAB06_advanced.o\" \"LAB06_advanced.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/LAB06_advanced.o"
-	@${FIXDEPS} "${OBJECTDIR}/LAB06_advanced.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/LAB06_BONUS.o.d 
+	@${RM} ${OBJECTDIR}/LAB06_BONUS.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/LAB06_BONUS.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/LAB06_BONUS.lst\" -e\"${OBJECTDIR}/LAB06_BONUS.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/LAB06_BONUS.o\" \"LAB06_BONUS.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/LAB06_BONUS.o"
+	@${FIXDEPS} "${OBJECTDIR}/LAB06_BONUS.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 else
-${OBJECTDIR}/LAB06_advanced.o: LAB06_advanced.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/LAB06_BONUS.o: LAB06_BONUS.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/LAB06_advanced.o.d 
-	@${RM} ${OBJECTDIR}/LAB06_advanced.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/LAB06_advanced.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/LAB06_advanced.lst\" -e\"${OBJECTDIR}/LAB06_advanced.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/LAB06_advanced.o\" \"LAB06_advanced.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/LAB06_advanced.o"
-	@${FIXDEPS} "${OBJECTDIR}/LAB06_advanced.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/LAB06_BONUS.o.d 
+	@${RM} ${OBJECTDIR}/LAB06_BONUS.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/LAB06_BONUS.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/LAB06_BONUS.lst\" -e\"${OBJECTDIR}/LAB06_BONUS.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/LAB06_BONUS.o\" \"LAB06_BONUS.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/LAB06_BONUS.o"
+	@${FIXDEPS} "${OBJECTDIR}/LAB06_BONUS.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
+dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION)  -w -x -u_DEBUG -z__ICD2RAM=1 -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"   -z__MPLAB_BUILD=1  -z__MPLAB_DEBUG=1 $(MP_LINKER_DEBUG_OPTION) -odist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION)  -w -x -u_DEBUG -z__ICD2RAM=1 -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"   -z__MPLAB_BUILD=1  -z__MPLAB_DEBUG=1 $(MP_LINKER_DEBUG_OPTION) -odist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+dist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION)  -w  -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"   -z__MPLAB_BUILD=1  -odist/${CND_CONF}/${IMAGE_TYPE}/LAB06_ADVANCED.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
+	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION)  -w  -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"   -z__MPLAB_BUILD=1  -odist/${CND_CONF}/${IMAGE_TYPE}/LAB06_BONUS.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 endif
 
 

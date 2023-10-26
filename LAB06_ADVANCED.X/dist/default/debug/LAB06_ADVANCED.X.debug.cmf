@@ -1,0 +1,400 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/LAB06_advanced.o
+__absolute__ - 0 0 0 122 1 1
+config CONFIG 4 300001 300001 D 1 1
+$C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+init CODE 0 0 0 4 1 2
+__absolute__ - 0 0 0 122 1 1
+config CONFIG 4 300001 300001 D 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 80-5F3 1
+SFR F80-F9B 1
+SFR F9D-FD3 1
+SFR FD5-FDA 1
+SFR FE0-FE2 1
+SFR FE8-FEA 1
+SFR FF0-FFC 1
+BANK0 80-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5F3 1
+CONST 122-7DBF 1
+IDLOC 200000-200007 1
+SMALLCONST 600-7DBF 1
+CODE 122-7DBF 1
+BIGRAM 1-5F3 1
+BIGSFR F80-F9B 1
+BIGSFR F9D-FD3 1
+BIGSFR FD5-FDA 1
+BIGSFR FE0-FE2 1
+BIGSFR FE8-FEA 1
+BIGSFR FF0-FFC 1
+COMRAM 1-7F 1
+CONFIG 300000-300000 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 600-7DBF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/LAB06_advanced.o
+0 __absolute__ ABS >38:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+2 __absolute__ ABS >39:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+4 __absolute__ ABS >41:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+6 __absolute__ ABS >42:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+8 __absolute__ ABS >43:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+A __absolute__ ABS >44:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+C __absolute__ ABS >45:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+E __absolute__ ABS >46:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+10 __absolute__ ABS >47:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+12 __absolute__ ABS >50:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+14 __absolute__ ABS >51:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+16 __absolute__ ABS >52:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+18 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+1A __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+1C __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+1E __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+20 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+22 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+24 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+26 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+28 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+2A __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+2C __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+2E __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+30 __absolute__ ABS >53:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+32 __absolute__ ABS >54:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+34 __absolute__ ABS >55:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+36 __absolute__ ABS >56:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+38 __absolute__ ABS >59:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+3A __absolute__ ABS >60:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+3C __absolute__ ABS >61:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+3E __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+40 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+42 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+44 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+46 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+48 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+4A __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+4C __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+4E __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+50 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+52 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+54 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+56 __absolute__ ABS >62:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+58 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+5A __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+5C __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+5E __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+60 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+62 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+64 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+66 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+68 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+6A __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+6C __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+6E __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+70 __absolute__ ABS >63:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+72 __absolute__ ABS >66:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+74 __absolute__ ABS >67:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+76 __absolute__ ABS >68:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+78 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+7A __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+7C __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+7E __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+80 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+82 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+84 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+86 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+88 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+8A __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+8C __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+8E __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+90 __absolute__ ABS >69:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+92 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+94 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+96 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+98 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+9A __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+9C __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+9E __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+A0 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+A2 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+A4 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+A6 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+A8 __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+AA __absolute__ ABS >70:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+AC __absolute__ ABS >73:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+AE __absolute__ ABS >74:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+B0 __absolute__ ABS >75:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+B2 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+B4 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+B6 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+B8 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+BA __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+BC __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+BE __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+C0 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+C2 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+C4 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+C6 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+C8 __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+CA __absolute__ ABS >76:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+CC __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+CE __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+D0 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+D2 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+D4 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+D6 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+D8 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+DA __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+DC __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+DE __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+E0 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+E2 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+E4 __absolute__ ABS >77:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+E6 __absolute__ ABS >80:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+E8 __absolute__ ABS >81:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+EA __absolute__ ABS >82:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+EC __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+EE __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+F0 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+F2 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+F4 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+F6 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+F8 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+FA __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+FC __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+FE __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+100 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+102 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+104 __absolute__ ABS >83:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+106 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+108 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+10A __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+10C __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+10E __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+110 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+112 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+114 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+116 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+118 __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+11A __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+11C __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+11E __absolute__ ABS >84:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+120 __absolute__ ABS >85:C:\Users\otter\MPLABXProjects\LAB06_ADVANCED.X\LAB06_advanced.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst -
+__Hspace_0 600 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_4 60000F 0 ABS 0 - -
+__Hibigdata 0 0 CODE 0 ibigdata -
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__Lsmallconst 0 0 SMALLCONST 0 smallconst -
+___sp 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+_main 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___stack_hi 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___stack_lo 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+start 0 0 CODE 0 init C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Hpowerup 0 0 CODE 0 powerup -
+__accesstop 80 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+intlevel0 0 0 CODE 0 text C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+intlevel1 0 0 CODE 0 text C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+intlevel2 0 0 CODE 0 text C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+intlevel3 0 0 CODE 0 text C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM -
+__Hifardata 0 0 CODE 0 ifardata -
+__Hclrtext 0 0 ABS 0 clrtext -
+___inthi_sp 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Hintcode_body 0 0 ABS 0 intcode_body -
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs -
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst -
+__Hintcodelo 0 0 CODE 0 intcodelo -
+__Lintcodelo 0 0 CODE 0 intcodelo -
+start_initialization 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM -
+isa$xinst 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hconst 0 0 CONST 0 const -
+__Hidata 0 0 CODE 0 idata -
+__Hidloc 0 0 ABS 0 idloc -
+__Hnvbit 0 0 COMRAM 1 nvbit -
+__Hrdata 0 0 COMRAM 1 rdata -
+__Hstack 0 0 STACK 2 stack -
+__Hbigbss 0 0 BIGRAM 1 bigbss -
+__Hbigram 0 0 ABS 0 bigram -
+__Hbigsfr 0 0 ABS 0 bigsfr -
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Hcomram 0 0 ABS 0 comram -
+__Hconfig 30000E 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lconst 0 0 CONST 0 const -
+__Lidata 0 0 CODE 0 idata -
+__Lidloc 0 0 ABS 0 idloc -
+__Lnvbit 0 0 COMRAM 1 nvbit -
+__Lrdata 0 0 COMRAM 1 rdata -
+__Lstack 0 0 STACK 2 stack -
+__Hfarbss 0 0 FARRAM 0 farbss -
+__Lintcode_body 0 0 ABS 0 intcode_body -
+__Habs1 0 0 ABS 0 abs1 -
+__Hdata 0 0 ABS 0 data -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit 4 0 CODE 0 init -
+__Hrbit 0 0 COMRAM 1 rbit -
+__Hrbss 0 0 COMRAM 1 rbss -
+__Htemp 0 0 COMRAM 1 temp -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Ldata 0 0 ABS 0 data -
+__Lheap 0 0 HEAP 7 heap -
+__Linit 0 0 CODE 0 init -
+__Lrbit 0 0 COMRAM 1 rbit -
+__Lrbss 0 0 COMRAM 1 rbss -
+__Ltemp 0 0 COMRAM 1 temp -
+__Ltext 0 0 ABS 0 text -
+__Hintret 0 0 ABS 0 intret -
+__Hirdata 0 0 CODE 0 irdata -
+__S0 0 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S4 0 0 ABS 0 - -
+__S5 0 0 ABS 0 - -
+__Lbigdata 0 0 BIGRAM 1 bigdata -
+__Hnvrram 0 0 COMRAM 1 nvrram -
+__Lintentry 0 0 ABS 0 intentry -
+__Hramtop 600 0 RAM 0 ramtop -
+__Hstruct 0 0 COMRAM 1 struct -
+__Lbigbss 0 0 BIGRAM 1 bigbss -
+__Lbigram 0 0 ABS 0 bigram -
+__Lbigsfr 0 0 ABS 0 bigsfr -
+__Lcomram 0 0 ABS 0 comram -
+__Lconfig 0 0 CONFIG 4 config -
+__Lfarbss 0 0 FARRAM 0 farbss -
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Lfardata 0 0 FARRAM 0 fardata -
+isa$std 1 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+stackhi 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+stacklo 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Lintcode 0 0 CODE 0 intcode -
+__Lintret 0 0 ABS 0 intret -
+__Lirdata 0 0 CODE 0 irdata -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Lnvrram 0 0 COMRAM 1 nvrram -
+__Hintentry 0 0 ABS 0 intentry -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lramtop 600 0 RAM 0 ramtop -
+__Lstruct 0 0 COMRAM 1 struct -
+__ramtop 600 0 RAM 0 ramtop C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 0 eeprom_data -
+__H__absolute__ 122 0 ABS 0 __absolute__ -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+___heap_hi 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___heap_lo 0 0 ABS 0 - C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\otter\AppData\Local\Temp\xcAskdk.\driver_tmp_6.o
+__Hbigdata 0 0 BIGRAM 1 bigdata -
+__Libigdata 0 0 CODE 0 ibigdata -
+__Lclrtext 0 0 ABS 0 clrtext -
+__HRAM 0 0 ABS 0 - -
+__Hbss 0 0 RAM 1 bss -
+__Hram 0 0 ABS 0 ram -
+__Hsfr 0 0 ABS 0 sfr -
+__LRAM 1 0 ABS 0 - -
+__Lbss 0 0 RAM 1 bss -
+__Lram 0 0 ABS 0 ram -
+__Lsfr 0 0 ABS 0 sfr -
+__Hfardata 0 0 FARRAM 0 fardata -
+__Hsmallconst 0 0 SMALLCONST 0 smallconst -
+__Lifardata 0 0 CODE 0 ifardata -
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs -
+__Hintcode 0 0 CODE 0 intcode -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
