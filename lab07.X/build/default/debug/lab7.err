@@ -1,0 +1,5 @@
+Warning[207] C:\USERS\OTTER\MPLABXPROJECTS\LAB07.X\LAB7.ASM 58 : Found label after column 1. (L1)
+Warning[207] C:\USERS\OTTER\MPLABXPROJECTS\LAB07.X\LAB7.ASM 59 : Found label after column 1. (L2)
+Warning[205] C:\USERS\OTTER\MPLABXPROJECTS\LAB07.X\LAB7.ASM 81 : Found directive in column 1. (endm)
+Warning[203] C:\USERS\OTTER\MPLABXPROJECTS\LAB07.X\LAB7.ASM 86 : Found opcode in column 1. (goto)
+Warning[205] C:\USERS\OTTER\MPLABXPROJECTS\LAB07.X\LAB7.ASM 123 : Found directive in column 1. (end)
